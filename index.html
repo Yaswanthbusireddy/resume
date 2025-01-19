@@ -3,131 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yaswanth Busireddy - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 10px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        nav {
-            margin-top: 10px;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 10px;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        section h2 {
-            border-bottom: 2px solid #333;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 40px;
-        }
-    </style>
+    <title>Yaswanth Busireddy | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>Yaswanth Busireddy</h1>
-        <p>Application Security Engineer | Passionate Professional</p>
-        <nav>
-            <a href="#objective">Objective</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <p class="title">Associate Software Engineer</p>
     </header>
-    <div class="container">
-        <section id="objective">
-            <h2>Career Objective</h2>
-            <p>Ambitious and passionate professional aspiring to achieve career progression while contributing to team success through organizational skills and security expertise.</p>
+    <nav class="nav">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#technical-skills">Technical Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Awards & Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="about" id="about">
+            <h2>About Me</h2>
+            <p>Ambitious and Passionate professional, aspiring to achieve career progression while achieving company goals. Eager to contribute to team success through teamwork and organizational skills. A solid foundation of security related experience with a natural affinity for Information Technology. Skilled in vulnerability assessment and adept at delivering strong risk management practices. Motivated to learn, grow and excel in my career.</p>
         </section>
-
-        <section id="skills">
+        <section class="technical-skills" id="technical-skills">
             <h2>Technical Skills</h2>
             <ul>
-                <li><strong>Programming Languages:</strong> C, Python</li>
-                <li><strong>Web Technologies:</strong> JavaScript, HTML, CSS</li>
-                <li><strong>Security Tools:</strong> Burp Suite, OWASP Zap, Metasploit, SqlMap, Nmap, Wireshark</li>
-                <li><strong>IDE:</strong> GitHub, GitLab</li>
-                <li><strong>Industry Knowledge:</strong> OOP, Data Structures</li>
+                <li>Programming Languages: C, Python</li>
+                <li>Web Technologies: JavaScript, HTML, CSS</li>
+                <li>Security Tools: Burp-suite, OWASP Zap, Metasploit, SqlMap, Nmap, Wireshark, etc.</li>
+                <li>IDE: GitHub, Gitlab</li>
+                <li>Industry Knowledge: Object-Oriented Programming, Data Structures</li>
             </ul>
         </section>
-
-        <section id="experience">
+        <section class="education" id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>B. Tech | Geethanjali institute of Science & Technology, AP- India</h3>
+                <p>AUGUST 2017 - JULY 2021</p>
+                <p>Bachelor’s in Electrical and Electronics Engineering graduated with an aggregate 72.3%.</p>
+            </div>
+            <div class="education-item">
+                <h3>12th | Narayana Junior College, Nellore- India</h3>
+                <p>JULY 2015 - APRIL 2017</p>
+                <p>Scored 95.1% with Math Physics Chemistry as major.</p>
+            </div>
+            <div class="education-item">
+                <h3>Schooling | Ratnam High School, Nellore- India</h3>
+                <p>MARCH 2015</p>
+                <p>Graduated with an aggregate CGPA of 9.2/10.</p>
+            </div>
+        </section>
+        <section class="experience" id="experience">
             <h2>Experience</h2>
-            <ul>
-                <li><strong>Security Analyst - Tata Consultancy Services</strong> (Feb 2022 – Present)
-                    <ul>
-                        <li>Conduct Vulnerability Assessments for web and mobile applications.</li>
-                        <li>Train developers and promote security awareness.</li>
-                        <li>Perform source code reviews for high-severity vulnerabilities.</li>
-                    </ul>
-                </li>
-                <li><strong>Application Security Engineer</strong>
-                    <ul>
-                        <li>Dynamic application security testing using tools like Burp Suite and OWASP Zap.</li>
-                        <li>Document and mitigate vulnerabilities.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Hybrid Inverter with IoT Overload Tripping:</strong> Developed a renewable energy-based inverter with IoT-enabled circuit breaker.</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p><strong>Email:</strong> <a href="mailto:busireddyyaswanth@gmail.com">busireddyyaswanth@gmail.com</a></p>
-            <p><strong>Phone:</strong> +91 8555099827</p>
-            <p><strong>Location:</strong> Nellore, Andhra Pradesh, India</p>
-        </section>
-    </div>
-    <footer>
-        <p>&copy; 2025 Yaswanth Busireddy. All rights reserved.</p>
-    </footer>
-</body>
-</html>
-
+            <div class="experience-item">
+                <h3>TATA CONSULTANCY SERVICES - Banglore, India | July 2021 - Present</h3>
+                <h4>Role: Security Analyst (Feb 2022 – PRESENT)</h4>
+                <ul>
+                    <li>Conduct Vulnerabilities Assessment and Penetration Testing for web and mobile Applications include Static Application Security Testing and Software Component Analysis.</li>
+                    <li>Conducting Web Security Trainings and workshop events for developers and product owners. Train developers and promote security awareness to ensure system security and to improve Application security.</li>
+                    <li>Executing several manual and automated security assessments implementing DevSecOps for detecting vulnerabilities in early product lifecycle.</li>
+                    <li>Performing source code reviews of critical applications for high severity vulnerabilities using tools like Fortify.</li>
+                    <li>Attempt to reduce false positive and false negative in Vulnerability Assessment.</li>
+                    <li>Handling POC’s, RFP’s and Kick-off presentations and meetings with new customers.</li>
+                    <li>Escalate
