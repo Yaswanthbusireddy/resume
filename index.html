@@ -3,78 +3,493 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yaswanth Busireddy | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid white;
+    <title>Yaswanth Busireddy - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: '';
             position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #3b82f6;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
             top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            width: 2px;
+            height: calc(100% - 20px);
+            background-color: #e5e7eb;
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+        .skill-pill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active-nav::after {
+            width: 100%;
+        }
+        .print-button:hover {
+            background-color: #2563eb;
+        }
+        .profile-image {
+            background-color: #3b82f6;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        @media print {
+            .no-print {
+                display: none;
+            }
+            .print-section {
+                break-inside: avoid;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <img src="profile%20pic.jpg" alt="Yaswanth Busireddy">
-        <h1>Yaswanth Busireddy</h1>
-        <p class="title">Associate Software Engineer</p>
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-8 shadow-lg no-print">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl font-bold">Yaswanth Busireddy</h1>
+                    <p class="text-xl mt-2">Systems Professional</p>
+                </div>
+                <nav class="flex space-x-4 md:space-x-6">
+                    <a href="#about" class="nav-link active-nav px-2 py-1 hover:text-blue-200">About</a>
+                    <a href="#experience" class="nav-link px-2 py-1 hover:text-blue-200">Experience</a>
+                    <a href="#education" class="nav-link px-2 py-1 hover:text-blue-200">Education</a>
+                    <a href="#skills" class="nav-link px-2 py-1 hover:text-blue-200">Skills</a>
+                    <a href="#projects" class="nav-link px-2 py-1 hover:text-blue-200">Projects</a>
+                    <a href="#volunteering" class="nav-link px-2 py-1 hover:text-blue-200">Volunteering</a>
+                </nav>
+            </div>
+        </div>
     </header>
-    <nav class="nav">
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#technical-skills">Technical Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#achievements">Awards & Achievements</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section class="about" id="about">
-            <h2>About Me</h2>
-            <p>Ambitious and Passionate professional, aspiring to achieve career progression while achieving company goals. Eager to contribute to team success through teamwork and organizational skills. A solid foundation of security related experience with a natural affinity for Information Technology. Skilled in vulnerability assessment and adept at delivering strong risk management practices. Motivated to learn, grow and excel in my career.</p>
-        </section>
-        <section class="technical-skills" id="technical-skills">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li>Programming Languages: C, Python</li>
-                <li>Web Technologies: JavaScript, HTML, CSS</li>
-                <li>Security Tools: Burp-suite, OWASP Zap, Metasploit, SqlMap, Nmap, Wireshark, etc.</li>
-                <li>IDE: GitHub, Gitlab</li>
-                <li>Industry Knowledge: Object-Oriented Programming, Data Structures</li>
-            </ul>
-        </section>
-        <section class="education" id="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>B. Tech | Geethanjali institute of Science & Technology, AP- India</h3>
-                <p>AUGUST 2017 - JULY 2021</p>
-                <p>Bachelor’s in Electrical and Electronics Engineering graduated with an aggregate 72.3%.</p>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Print Button -->
+        <div class="flex justify-end mb-6 no-print">
+            <button onclick="window.print()" class="print-button bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                </svg>
+                Print Resume
+            </button>
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="mb-12 print-section">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-6 mb-6">
+                    <div class="profile-image w-32 h-32 rounded-full overflow-hidden flex-shrink-0">
+                         <img src="profile%20pic.jpg" alt="Yaswanth Busireddy">
+                    </div>
+                    <div>
+                        <h2 class="section-title text-2xl font-semibold mb-6">About Me</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Systems professional prepared to deliver high standards and impactful results. Expertise in system design and integration, consistently enhancing operational efficiency. Known for strong teamwork and adaptability, with focus on innovation and reliability. Skills include systems analysis and project management, valued for meticulous attention to detail and proactive approach.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg mt-4">
+                    <h3 class="font-semibold text-lg mb-3">Contact Information</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <a href="mailto:yashwanthec667@gmail.com" class="text-blue-600 hover:underline">yashwanthec667@gmail.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <a href="https://www.linkedin.com/in/yaswanth-busireddy" target="_blank" class="text-blue-600 hover:underline">LinkedIn: Yaswanth Busireddy</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <a href="https://yaswanthbusireddy.github.io/resume" target="_blank" class="text-blue-600 hover:underline">Portfolio Website</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Zimmer 623, Ostenbergstrasse 99, Hombruch, 44227 Dortmund, Germany</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="education-item">
-                <h3>12th | Narayana Junior College, Nellore- India</h3>
-                <p>JULY 2015 - APRIL 2017</p>
-                <p>Scored 95.1% with Math Physics Chemistry as major.</p>
-            </div>
-            <div class="education-item">
-                <h3>Schooling | Ratnam High School, Nellore- India</h3>
-                <p>MARCH 2015</p>
-                <p>Graduated with an aggregate CGPA of 9.2/10.</p>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="mb-12 print-section">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="section-title text-2xl font-semibold mb-6">Work Experience</h2>
+                <div class="space-y-8">
+                    <div class="timeline-item pb-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <h3 class="text-xl font-medium text-blue-700">System Engineer</h3>
+                            <div class="flex items-center mt-2 md:mt-0">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Jul 2021 - Sep 2024</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mt-1">Tata Consultancy Services, Nellore, India</p>
+                        <ul class="mt-3 list-disc list-inside text-gray-700 space-y-1">
+                            <li>Designing and developing system architectures based on requirements, conducting feasibility studies and performance evaluations.</li>
+                            <li>Creating technical documentation, user guides, system reports and documenting configurations, changes, and troubleshooting processes.</li>
+                            <li>Ensuring systems comply with security policies and industry standards.</li>
+                            <li>Conducting stress tests and troubleshooting system issues also implementing enhancements for efficiency and scalability.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item pb-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <h3 class="text-xl font-medium text-blue-700">Intern</h3>
+                            <div class="flex items-center mt-2 md:mt-0">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Jun 2019 - Jul 2019</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mt-1">Andhra Pradesh Power Generation Corporation Limited, Nellore, India</p>
+                        <ul class="mt-3 list-disc list-inside text-gray-700">
+                            <li>Observed thermal power plant operations, including power generation, transformer types, protection systems, and motors.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <h3 class="text-xl font-medium text-blue-700">Intern</h3>
+                            <div class="flex items-center mt-2 md:mt-0">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Feb 2019 - Feb 2019</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mt-1">Weber India Infra Power Pvt Limited, Nellore, India</p>
+                        <ul class="mt-3 list-disc list-inside text-gray-700">
+                            <li>Acquired practical insights into transformer design, winding types, and protective schemes.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="experience" id="experience">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>TATA CONSULTANCY SERVICES - Banglore, India | July 2021 - Present</h3>
-                <h4>Role: Security Analyst (Feb 2022 – PRESENT)</h4>
-                <ul>
-                    <li>Conduct Vulnerabilities Assessment and Penetration Testing for web and mobile Applications include Static Application Security Testing and Software Component Analysis.</li>
-                    <li>Conducting Web Security Trainings and workshop events for developers and product owners. Train developers and promote security awareness to ensure system security and to improve Application security.</li>
-                    <li>Executing several manual and automated security assessments implementing DevSecOps for detecting vulnerabilities in early product lifecycle.</li>
-                    <li>Performing source code reviews of critical applications for high severity vulnerabilities using tools like Fortify.</li>
-                    <li>Attempt to reduce false positive and false negative in Vulnerability Assessment.</li>
-                    <li>Handling POC’s, RFP’s and Kick-off presentations and meetings with new customers.</li>
-                    <li>Escalate
+
+        <!-- Education Section -->
+        <section id="education" class="mb-12 print-section">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="section-title text-2xl font-semibold mb-6">Education</h2>
+                <div class="space-y-8">
+                    <div class="timeline-item pb-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <h3 class="text-xl font-medium text-blue-700">Masters in Sustainable Energy Systems</h3>
+                            <div class="flex items-center mt-2 md:mt-0">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Oct 2024 - Current</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mt-1">Technical University of Dortmund, Dortmund, Germany</p>
+                        <a href="https://www.tu-dortmund.de/" target="_blank" class="text-blue-600 hover:underline text-sm mt-1 inline-block">https://www.tu-dortmund.de/</a>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <h3 class="text-xl font-medium text-blue-700">Bachelor of Technology in Electrical and Electronics Engineering</h3>
+                            <div class="flex items-center mt-2 md:mt-0">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Jun 2017 - Jul 2021</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mt-1">Geethanjali Institute of Science and Technology, Nellore, India</p>
+                        <a href="https://gist.edu.in/gist/gist-home/" target="_blank" class="text-blue-600 hover:underline text-sm mt-1 inline-block">https://gist.edu.in/gist/gist-home/</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-12 print-section">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="section-title text-2xl font-semibold mb-6">Projects</h2>
+                <div class="space-y-8">
+                    <div class="timeline-item pb-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <h3 class="text-xl font-medium text-blue-700">Creation of Business Plan- Wattup</h3>
+                            <div class="flex items-center mt-2 md:mt-0">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Oct 2024 - Mar 2025</span>
+                            </div>
+                        </div>
+                        <ul class="mt-3 list-disc list-inside text-gray-700 space-y-2">
+                            <li>Developed a comprehensive business plan for "Wattup," focusing on sustainable energy solutions, market analysis, and financial feasibility to support renewable energy adoption.</li>
+                            <li>Conducted in-depth research on energy technologies, policy frameworks, and business models to optimize operational efficiency and scalability.</li>
+                            <li>Created financial projections and strategic roadmaps to attract investors and ensure long-term viability in the renewable energy sector.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <h3 class="text-xl font-medium text-blue-700">Hybrid Inverter with overload tripping through IoT</h3>
+                            <div class="flex items-center mt-2 md:mt-0">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Jan 2021 - Jul 2021</span>
+                            </div>
+                        </div>
+                        <ul class="mt-3 list-disc list-inside text-gray-700">
+                            <li>Developed a hybrid inverter system integrating solar and wind energy, featuring battery storage, AC conversion, and an IoT-enabled overload protection circuit to enable standalone industrial power supply independent of the grid.</li>
+                        </ul>
+                        <div class="mt-3">
+                            <a href="https://iasr.co.in/wpcontent/uploads/2021/08/power-electronics1108.pdf" target="_blank" class="text-blue-600 hover:underline text-sm">Publication Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Volunteering Section -->
+        <section id="volunteering" class="mb-12 print-section">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="section-title text-2xl font-semibold mb-6">Volunteering</h2>
+                <div class="space-y-8">
+                    <div class="timeline-item pb-8">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <h3 class="text-xl font-medium text-blue-700">General Elections</h3>
+                            <div class="flex items-center mt-2 md:mt-0">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">2018</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mt-1">Andhra Pradesh</p>
+                        <ul class="mt-3 list-disc list-inside text-gray-700 space-y-1">
+                            <li>Organizing the voting booth.</li>
+                            <li>Monitoring the booth through camera.</li>
+                            <li>Guiding the voters and explaining the voting procedure.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                            <h3 class="text-xl font-medium text-blue-700">Class Representative</h3>
+                            <div class="flex items-center mt-2 md:mt-0">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">2017 - 2021</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mt-1">Nellore</p>
+                        <ul class="mt-3 list-disc list-inside text-gray-700 space-y-1">
+                            <li>Bridging the gap between students requirements and professors.</li>
+                            <li>Organizing workshops and cultural events.</li>
+                            <li>Connecting with other departments to share and get the information.</li>
+                            <li>Maintaining the Attendance record.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-12 print-section">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="section-title text-2xl font-semibold mb-6">Skills</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-lg font-medium text-blue-700 mb-3">Software & Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill bg-blue-50 text-blue-700 px-3 py-1 rounded-full">ServiceNow</span>
+                            <span class="skill-pill bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Power BI</span>
+                            <span class="skill-pill bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Microsoft Office</span>
+                            <span class="skill-pill bg-blue-50 text-blue-700 px-3 py-1 rounded-full">MATLAB/Simulink</span>
+                            <span class="skill-pill bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Jira</span>
+                            <span class="skill-pill bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Trello</span>
+                            <span class="skill-pill bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Workfront</span>
+                            <span class="skill-pill bg-blue-50 text-blue-700 px-3 py-1 rounded-full">SharePoint</span>
+                            <span class="skill-pill bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Typhoon</span>
+                            <span class="skill-pill bg-blue-50 text-blue-700 px-3 py-1 rounded-full">Power Factory</span>
+                            <span class="skill-pill bg-blue-50 text-blue-700 px-3 py-1 rounded-full">COMSOL Multiphysics</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-medium text-blue-700 mb-3">Sustainability & Assessment</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill bg-green-50 text-green-700 px-3 py-1 rounded-full">Life Cycle Assessment</span>
+                            <span class="skill-pill bg-green-50 text-green-700 px-3 py-1 rounded-full">Social Impact Analysis</span>
+                            <span class="skill-pill bg-green-50 text-green-700 px-3 py-1 rounded-full">Environmental Impact Analysis</span>
+                            <span class="skill-pill bg-green-50 text-green-700 px-3 py-1 rounded-full">Corporate Sustainability Reporting</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-medium text-blue-700 mb-3">Cybersecurity</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill bg-purple-50 text-purple-700 px-3 py-1 rounded-full">Web Application Security</span>
+                            <span class="skill-pill bg-purple-50 text-purple-700 px-3 py-1 rounded-full">Vulnerability Assessment</span>
+                            <span class="skill-pill bg-purple-50 text-purple-700 px-3 py-1 rounded-full">Penetration Testing</span>
+                            <span class="skill-pill bg-purple-50 text-purple-700 px-3 py-1 rounded-full">Burp Suite</span>
+                            <span class="skill-pill bg-purple-50 text-purple-700 px-3 py-1 rounded-full">IT Security</span>
+                            <span class="skill-pill bg-purple-50 text-purple-700 px-3 py-1 rounded-full">API Penetration Testing</span>
+                            <span class="skill-pill bg-purple-50 text-purple-700 px-3 py-1 rounded-full">OWASP ZAP</span>
+                            <span class="skill-pill bg-purple-50 text-purple-700 px-3 py-1 rounded-full">Ethical Hacking</span>
+                            <span class="skill-pill bg-purple-50 text-purple-700 px-3 py-1 rounded-full">Security Architecture</span>
+                            <span class="skill-pill bg-purple-50 text-purple-700 px-3 py-1 rounded-full">Vulnerability Management</span>
+                            <span class="skill-pill bg-purple-50 text-purple-700 px-3 py-1 rounded-full">Kali Linux</span>
+                            <span class="skill-pill bg-purple-50 text-purple-700 px-3 py-1 rounded-full">Wireshark</span>
+                            <span class="skill-pill bg-purple-50 text-purple-700 px-3 py-1 rounded-full">Fortify</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-medium text-blue-700 mb-3">Programming & Data</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill bg-yellow-50 text-yellow-700 px-3 py-1 rounded-full">Python</span>
+                            <span class="skill-pill bg-yellow-50 text-yellow-700 px-3 py-1 rounded-full">C</span>
+                            <span class="skill-pill bg-yellow-50 text-yellow-700 px-3 py-1 rounded-full">HTML</span>
+                            <span class="skill-pill bg-yellow-50 text-yellow-700 px-3 py-1 rounded-full">CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Networks and Memberships -->
+        <section class="mb-12 print-section">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="section-title text-2xl font-semibold mb-6">Networks and Memberships</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Member in Institute of Engineers</li>
+                    <li>Member in National Service Scheme</li>
+                    <li>Organizing and participating in social welfare activities like education awareness, environmental awareness, health importance, blood camps, cleaning awareness, green awareness through planting trees.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section class="print-section">
+            <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <h2 class="section-title text-2xl font-semibold mb-6">Publications</h2>
+                <div class="timeline-item">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                        <h3 class="text-xl font-medium text-blue-700">Hybrid inverter with overloading tripping through IoT</h3>
+                        <div class="flex items-center mt-2 md:mt-0">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">2021</span>
+                        </div>
+                    </div>
+                    <a href="https://iasr.co.in/wpcontent/uploads/2021/08/power-electronics1108.pdf" target="_blank" class="text-blue-600 hover:underline mt-2 inline-block">View Publication</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12 no-print">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2024 Yaswanth Busireddy. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="mailto:yashwanthec667@gmail.com" class="text-blue-300 hover:text-blue-100 mr-4">Email</a>
+                    <a href="https://www.linkedin.com/in/yaswanth-busireddy" target="_blank" class="text-blue-300 hover:text-blue-100">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active nav link
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active-nav');
+                    });
+                    this.classList.add('active-nav');
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                    currentSection = '#' + section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href') === currentSection) {
+                    link.classList.add('active-nav');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
